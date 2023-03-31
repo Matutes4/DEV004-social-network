@@ -1,0 +1,48 @@
+ body {
+    background-color: #073149;
+ }
+
+ button {
+      color: white;
+    background-color: #E14977;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 0px #C43C5D;
+ }
+
+ h2 {
+    color: white;
+ }
+
+  .seccion1 {
+  display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   }
+
+  .seccion2 {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center; 
+   padding: 20px;
+   margin: 10px;
+ }
+ 
+
+.seccion3 {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   
+}   
+
+
+
+
+
+
