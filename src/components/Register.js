@@ -1,3 +1,6 @@
+import { registerWithEmail } from "../lib/authentication";
+import { registrar } from "./app.js";
+
 export const Register = (navigate) => {
   const div = document.createElement('div');
   const InputName = document.createElement('Input');
@@ -5,7 +8,7 @@ export const Register = (navigate) => {
   const Inputrepeat = document.createElement('Input');
   const title = document.createElement('h2');
   const title2 = document.createElement('h2');
-  const button = document.createElement('button');
+  const buttonRegister = document.createElement('button');
   const buttonBack = document.createElement('button');
 
   const image = document.createElement('img');
@@ -13,9 +16,12 @@ export const Register = (navigate) => {
   image.src = 'imagenes/dance.jpg';
 
   InputName.placeholder = ('Usuario');
+  InputName.type = ('email');
   InputPassword.placeholder = ('Contraseña');
+  InputPassword.type = ('password');
   Inputrepeat.placeholder = ('Repita la contraseña');
-  button.textContent = 'Registrarte';
+  Inputrepeat.type = ('password');
+  buttonRegister.textContent = 'Registrarte';
   buttonBack.textContent = 'Inicia sesión';
   title.textContent = 'Bienvenido registrarte es rápido y fácil';
   title2.textContent = '¿Ya tienes una cuenta?';
@@ -32,9 +38,11 @@ export const Register = (navigate) => {
   seccion3.classList.add('seccion3');
 
   seccion1.append(title, image);
-  seccion2.append(InputName, InputPassword, Inputrepeat, button);
+  seccion2.append(InputName, InputPassword, Inputrepeat, buttonRegister);
   seccion3.append(title2, buttonBack);
   div.append(seccion1, seccion2, seccion3);
-
+  buttonRegister.addEventListener('click', () => {
+    registrar(InputName, InputPassword, Inputrepeat);
+  });
   return div;
 };
