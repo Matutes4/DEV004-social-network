@@ -1,4 +1,5 @@
 import { iniciarCongoogle } from '../lib/authentication.js';
+import { ingresar } from './app.js';
 
 export const welcome = (navigate) => {
   const div = document.createElement('div');
@@ -11,7 +12,7 @@ export const welcome = (navigate) => {
   const title2 = document.createElement('h2');
   const image = document.createElement('img');
   image.src = 'imagenes/dance.jpg';
-  InputUser.placeholder = 'Usuario';
+  InputUser.placeholder = 'Email';
   InputPass.placeholder = 'Contraseña';
   buttonLogin.textContent = 'Iniciar sesión';
   buttonRegister.textContent = 'Crear Cuenta';
@@ -23,6 +24,7 @@ export const welcome = (navigate) => {
   buttonRegister.addEventListener('click', () => {
     navigate('/Register');
   });
+
   const seccion1 = document.createElement('div');
   seccion1.classList.add('seccion1');
   const seccion2 = document.createElement('div');
@@ -30,13 +32,17 @@ export const welcome = (navigate) => {
   const seccion3 = document.createElement('div');
   seccion3.classList.add('seccion3');
 
+  buttonLogin.addEventListener('click', () => {
+    ingresar(InputUser, InputPass, navigate);
+  });
+
   seccion1.append(InputUser, InputPass, buttonLogin);
   seccion2.append(title2, buttonRegister, buttonGoogle);
   seccion3.append(title, image);
 
   div.append(seccion3, seccion1, seccion2);
   buttonGoogle.addEventListener('click', () => {
-    iniciarCongoogle()
+    iniciarCongoogle(navigate);
   });
   return div;
 };

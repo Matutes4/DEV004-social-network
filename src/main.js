@@ -1,15 +1,17 @@
 // Este es el punto de entrada de tu aplicacion
 import { welcome } from './components/welcome.js';
 import { Register } from './components/Register.js';
+import { Wall } from './components/Wall.js';
 
 const root = document.getElementById('root');
 
 const routes = {
   '/': welcome,
   '/Register': Register,
+  '/Wall': Wall,
 };
 
-const onNavigate = (pathname) => {
+export const onNavigate = (pathname) => {
   window.history.pushState({}, pathname, window.location.origin + pathname);
   root.removeChild(root.firstChild);
   root.appendChild(routes[pathname](onNavigate));

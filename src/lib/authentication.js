@@ -3,7 +3,8 @@ import { auth } from './firebase.js';
 
 const provider = new GoogleAuthProvider();
 
-export function iniciarCongoogle() {
+export function iniciarCongoogle(navigate) {
+  navigate("/Wall");
   return signInWithPopup(auth, provider);
 }
 
