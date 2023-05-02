@@ -1,19 +1,27 @@
-import { GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import {
+  GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword, signOut
+} from 'firebase/auth';
 import { auth } from './firebase.js';
 
 const provider = new GoogleAuthProvider();
 
 export function iniciarCongoogle(navigate) {
-  navigate("/Wall");
-  return signInWithPopup(auth, provider);
+  return signInWithPopup(auth, provider).then(() => {
+    navigate('/Wall');
+  });
+}
+export const logOut = () => {
+  const auth = getAuth();
+  return signOut(auth);
+};
+
+export const actualUser = () => {
+  const auth= getAuth(app);
+  console.log(auth.currentUser);
+  return signOut(auth);
 }
 
-export const registerWithEmail = (email, password) => {
+export const registerWithEmail = (email, password) => createUserWithEmailAndPassword(auth, email, password);
 
-  return createUserWithEmailAndPassword(auth, email, password);
-}
+export const signInWithPassword = (email, password) => signInWithEmailAndPassword(auth, email, password);
 
-export const signInWithPassword = (email, password) => {
-  
-  return signInWithEmailAndPassword(auth, email, password);
-}

@@ -14,6 +14,7 @@ export const welcome = (navigate) => {
   image.src = 'imagenes/dance.jpg';
   InputUser.placeholder = 'Email';
   InputPass.placeholder = 'Contraseña';
+  InputPass.type = ('password');
   buttonLogin.textContent = 'Iniciar sesión';
   buttonRegister.textContent = 'Crear Cuenta';
   buttonGoogle.textContent = 'Acceder usando Google';
