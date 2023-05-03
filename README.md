@@ -7,7 +7,7 @@ DanceBody es una aplicación de Red-Social que permite a profesores y alumnos in
  Historia de usuario 1.
 El usuario debe poder registrarse para ingresar a la aplicación y además poder loguearse desde google, para dar y obtener información de  clases de baile.
 
-Definición de terminado:
+# Definición de terminado:
 1. Botón iniciar sesión: El usuario podrá iniciar sesión si es que ha creado una cuenta.  De lo contrario al darle click al botón Iniciar sesión le avisará "que el usuario no ha sido registrado"
 2. Botón crear cuenta: Llevará al usuario a llenar un formulario para su registro.  El usuario se debe loguearse con un nombre de usuario único y con una contraseña de mínimo 6 caracteres.
 3. Botón acceder con Google: Que le permitirá al usuario iniciar sesión con su cuenta Google.
@@ -16,7 +16,7 @@ Definición de terminado:
  Historia de usuario 2.
 El usuario podrá hacer posts para compartir información sobre clases de baile, horarios, o costos.
 
-Definición de terminado:
+# Definición de terminado:
 1. Campo input donde el usuario puede realizar sus posts.
 2. Botón "publicar".
 
