@@ -40,7 +40,7 @@ El suario puede cerrar sesión.
  Definición de terminado:
 1. Botón que permite al usuario logueado cerrar sesión.
 
-Diseño de la interfaz de usuario
+# Diseño de la interfaz de usuario
 
  Prototipo de alta fidelidad:
 Se realizó un prototipo de alta fidelidad en Figma, para ello el siguiente link:
