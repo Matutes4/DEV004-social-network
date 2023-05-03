@@ -49,8 +49,7 @@ https://www.figma.com/proto/zQtkbN6nVuaJTanlUySn9D/My-firs-desing?node-id=39-8&s
 Criterios de Acepatación:
  - Es una aplicación SPA ( SINGLE PAGE APLICATION).
  - Es responsive.
- -   Se Realizaron pruebas de usabilidad e incorporamos el _feedback_ de los
- - usuarios como mejoras.
+ -   Se Realizaron pruebas de usabilidad e incorporamos el _feedback_ de los usuarios como mejoras.
  - Despliegue de la aplicación con netlify.
  
   
